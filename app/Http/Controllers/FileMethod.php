@@ -23,7 +23,7 @@ class FileMethod implements Method
             'message' => 'required|min:10'
         ]);
 
-        $message = Storage::prepend('messages/feedback.txt', $this->request . '    ');
+        $message = Storage::prepend('messages/feedback.txt', $this->request . '   ');
 
         return [
             'status' => true,
