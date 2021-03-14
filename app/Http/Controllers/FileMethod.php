@@ -23,8 +23,8 @@ class FileMethod implements Method
             'message' => 'required|min:10'
         ]);
 
-        $feedback = 'Имя: ' . $this->request['name'] . ' Номер телефона: ' . $this->request['number'] . ' Обращение: ' . $this->request['message'];
-        $message = Storage::prepend('messages/feedback.txt', $feedback );
+        $fields = 'Имя: ' . $this->request['name'] . ' Номер телефона: ' . $this->request['number'] . ' Обращение: ' . $this->request['message'];
+        $message = Storage::prepend('messages/feedback.txt', $fields );
 
         return [
             'status' => true,
